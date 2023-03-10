@@ -1,13 +1,8 @@
-
-module Crystal::Smuggle
-    class Options
-        def initialize
-            @URL = ""
-            @Pipeline = false
-            @Method = "POST"
-            @Headers = string[]
-            @Timeout = 5
-            @Output = ""
-        end
+class Options
+    def initialize(
+            @method : String,
+            @headers : String,
+            @timeout : Int32,
+            @output : String)
     end
 end
