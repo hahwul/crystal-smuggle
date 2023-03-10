@@ -11,22 +11,22 @@ end
 OptionParser.parse do |parser|
   parser.banner = "CRYSTAL-SMUGGLE"
 
-  parser.on "-u URL", "--url=URL", "Target URL from argument" do
+  parser.on "-u URL", "--url=URL", "Target URL from argument" do |url|
 
   end
   parser.on "-p", "--pipeline", "Target URL from stdin" do
 
   end
-  parser.on "-X METHOD", "--method=METHOD", "Set HTTP Request Method" do
+  parser.on "-X METHOD", "--method=METHOD", "Set HTTP Request Method" do |method|
     
   end
-  parser.on "-H HEADERS", "--headers=HEADERS", "Set HTTP Request Headers" do
+  parser.on "-H HEADERS", "--headers=HEADERS", "Set HTTP Request Headers" do |headers|
     
   end
-  parser.on "-t SECOND", "--timeout=SECOND", "Set Timeout" do
+  parser.on "-t SECOND", "--timeout=SECOND", "Set Timeout" do |timeout|
     
   end
-  parser.on "-o PATH", "--output=PATH", "Output file" do
+  parser.on "-o PATH", "--output=PATH", "Output file" do |output|
     
   end
   parser.on "-v", "--version", "Show version" do
