@@ -1,0 +1,13 @@
+name: crystal-smuggle
+version: 0.1.0
+
+authors:
+  - hahwul <hahwul@gmail.com>
+
+targets:
+  crystal-smuggle:
+    main: src/crystal-smuggle.cr
+
+crystal: 1.7.3
+
+license: MIT
