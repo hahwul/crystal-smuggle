@@ -8,6 +8,11 @@ targets:
   crystal-smuggle:
     main: src/crystal-smuggle.cr
 
+
+dependencies:
+  logger:
+    github: crystal-lang/logger.cr
+
 crystal: 1.7.3
 
 license: MIT

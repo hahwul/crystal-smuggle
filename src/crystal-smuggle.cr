@@ -1,4 +1,5 @@
 require "option_parser"
+require "logger"
 require "./options.cr"
 require "./scan.cr"
 
@@ -10,7 +11,7 @@ url = ""
 pipeline = false
 method = "POST"
 headers = ""
-timeout = 5
+timeout = 15
 output = ""
 
 OptionParser.parse do |parser|
@@ -38,10 +39,13 @@ OptionParser.parse do |parser|
 end
 
 options = Options.new(method, headers, timeout, output)
+log = Logger.new(STDERR)
 
 if pipeline 
   # STDIN
+  log.info("running from STDIN")
 else
   # URL
+  log.info("running to #{url}")
   scan(url, options)
 end
