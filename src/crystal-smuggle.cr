@@ -17,12 +17,12 @@ output = ""
 OptionParser.parse do |parser|
   parser.banner = "CRYSTAL-SMUGGLE"
 
-  parser.on "-u URL", "--url=URL", "Target URL from argument" {|var| url = var}
-  parser.on "-p", "--pipeline", "Target URL from stdin"{pipeline = true}
-  parser.on "-X METHOD", "--method=METHOD", "Set HTTP Request Method" {|var| method = var}
-  parser.on "-H HEADERS", "--headers=HEADERS", "Set HTTP Request Headers" {|var| headers = var}
-  parser.on "-t SECOND", "--timeout=SECOND", "Set Timeout" {|var| timeout = var.to_i}
-  parser.on "-o PATH", "--output=PATH", "Output file" {|var| output = var}
+  parser.on "-u URL", "--url=URL", "Target URL from argument" { |var| url = var }
+  parser.on "-p", "--pipeline", "Target URL from stdin" { pipeline = true }
+  parser.on "-X METHOD", "--method=METHOD", "Set HTTP Request Method" { |var| method = var }
+  parser.on "-H HEADERS", "--headers=HEADERS", "Set HTTP Request Headers" { |var| headers = var }
+  parser.on "-t SECOND", "--timeout=SECOND", "Set Timeout" { |var| timeout = var.to_i }
+  parser.on "-o PATH", "--output=PATH", "Output file" { |var| output = var }
   parser.on "-v", "--version", "Show version" do
     puts Crystal::Smuggle::VERSION
     exit
@@ -41,7 +41,7 @@ end
 options = Options.new(method, headers, timeout, output)
 log = Logger.new(STDERR)
 
-if pipeline 
+if pipeline
   # STDIN
   log.info("running from STDIN")
 else
